@@ -1,0 +1,12 @@
+.tituloprocesadores {
+  color: gray;
+  text-align: center;
+  margin: 20px;
+  font-size: 30px;
+  -webkit-text-decoration: solid;
+          text-decoration: solid;
+}
+.tituloprocesadores .mensajeProcesador {
+  font-size: 15px;
+  color: black;
+}/*# sourceMappingURL=ItemListContainer.css.map */
