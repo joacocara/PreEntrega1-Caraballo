@@ -11,12 +11,10 @@ function App() {
   return(
     <div>
       <NavBar />
-      <ItemListContainer mensaje="Lo mejor para el mejor"/>
-    <div>
-      <Button variant="warning">Apretá acá</Button>
-      <Button>Apretá acá +</Button>
-      <Button>Apretá acá -</Button>
-    </div>
+
+
+        <ItemListContainer mensaje="Lo mejor para el mejor"/>
+
     </div>
   )
 }
