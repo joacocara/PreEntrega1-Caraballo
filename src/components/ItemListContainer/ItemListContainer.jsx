@@ -1,20 +1,28 @@
+import { useEffect, useState } from 'react'
 import './ItemListContainer.scss'
+import { pedirDatos } from '../../helpers/pedirDatos'
+import ItemList from '../itemList/itemList'
 
-const MOCK_DATA = [
-    {
-        id: 1,
-        nombre: "Ryzen 5 3600",
-        descripcion: "Procesador de 3.6 GHZ",
-        precio: 47000,
-        img: ""
-    }
-]
 
-const ItemListContainer = ({mensaje}) => {
+
+const ItemListContainer = () => {
+
+    const [productos, setProductos] = useState([])
+
+    useEffect(() => () => {
+        pedirDatos()
+            .then((res) => {
+                setProductos(res)
+            })
+            .catch((error) => {
+                console.log(error)
+            })
+    }, [])
+    
+
     return(
-        <div className="tituloprocesadores">
-            <h2>Procesadores</h2>
-            <p className="mensajeProcesador">{mensaje}</p>
+        <div className="container my-5">
+         <ItemList items={productos}/>
         </div>
     )
 }

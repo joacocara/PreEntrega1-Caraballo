@@ -13,7 +13,7 @@ function App() {
       <NavBar />
 
 
-        <ItemListContainer mensaje="Lo mejor para el mejor"/>
+        <ItemListContainer />
 
     </div>
   )
