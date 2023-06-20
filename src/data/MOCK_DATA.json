@@ -4,7 +4,7 @@
         "nombre": "Ryzen 5 3600",
         "descripcion": "Procesador de 3.6 Ghz",
         "precio": 47000,
-        "img": "https://dummyimage.com/250x250/ff00ff/00ff11",
+        "img": "/public/r5.png",
         "category": "ryzen"
     },
     {
@@ -12,7 +12,7 @@
         "nombre": "Ryzen 7 7600",
         "descripcion": "Procesador de 3.9 Ghz",
         "precio": 60000,
-        "img": "https://dummyimage.com/250x250/ff00ff/00ff11",
+        "img": "/public/r7.png",
         "category": "ryzen"
     },
     {
@@ -20,7 +20,7 @@
         "nombre": "Ryzen 9 7800",
         "descripcion": "Procesador de 4.1 Ghz",
         "precio": 100000,
-        "img": "https://dummyimage.com/250x250/ff00ff/00ff11",
+        "img": "/public/r9.png",
         "category": "ryzen"
     },
     {
@@ -28,7 +28,7 @@
         "nombre": "Intel i5 12",
         "descripcion": "Procesador de 3.6 Ghz",
         "precio": 50000,
-        "img": "https://dummyimage.com/250x250/ff00ff/00ff11",
+        "img": "/public/i5.png",
         "category": "intel"
     },
     {
@@ -36,7 +36,7 @@
         "nombre": "Intel i7 12",
         "descripcion": "Procesador de 3.9 Ghz",
         "precio": 80000,
-        "img": "https://dummyimage.com/250x250/ff00ff/00ff11",
+        "img": "/public/i7.png",
         "category": "intel"
     },
     {
@@ -44,7 +44,7 @@
         "nombre": "Intel i9 12",
         "descripcion": "Procesador de 3.9 Ghz",
         "precio": 120000,
-        "img": "https://dummyimage.com/250x250/ff00ff/00ff11",
+        "img": "/public/i9.png",
         "category": "intel"
     }
 ]

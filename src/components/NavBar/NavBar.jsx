@@ -1,6 +1,8 @@
 import './NavBar.scss'
 import logo from '../../assets/react.svg'
 import { Link } from 'react-router-dom'
+import React from 'react'
+
 
 
 const NavBar = ({variant = false}) => {
@@ -16,7 +18,8 @@ const NavBar = ({variant = false}) => {
                     <Link className='navbar__link' to="/">inicio</Link>
                     <Link className="navbar__link" to="/productos/ryzen">Ryzen</Link>
                     <Link className="navbar__link" to="/productos/intel">Intel</Link>
-                    <Link className="navbar__link" to="/contacto">Contacto</Link>
+                    <Link className="navbar__link" to="/contacto">Contacto</Link>    
+                    <img className='carrito' src="/carrito.png" alt="carrito" />
                 </nav>
             </div>
         </header>   
