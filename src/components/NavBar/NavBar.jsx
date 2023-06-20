@@ -1,15 +1,22 @@
 import './NavBar.scss'
+import logo from '../../assets/react.svg'
+import { Link } from 'react-router-dom'
 
-const NavBar = () => {
+
+const NavBar = ({variant = false}) => {
+
     return (
-        <header className="navbar">
+        <header className={variant ? "navbar navbar-v" : "navbar"}>
             <div className="contenedor__navbar">
-                <img src='vite.svg' alt='logo' />
+             {/*<img src='vite.svg' alt='logo' />*/}
+             <img src={logo} alt="logo" />
+                
                 
                 <nav className="navbar__nav">
-                    <a className="navbar__link" href="#">Tienda</a>
-                    <a className="navbar__link" href="#">Productos</a>
-                    <a className="navbar__link" href="#">Envios</a>
+                    <Link className='navbar__link' to="/">inicio</Link>
+                    <Link className="navbar__link" to="/productos/ryzen">Ryzen</Link>
+                    <Link className="navbar__link" to="/productos/intel">Intel</Link>
+                    <Link className="navbar__link" to="/contacto">Contacto</Link>
                 </nav>
             </div>
         </header>   

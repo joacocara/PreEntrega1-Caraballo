@@ -1,32 +1,27 @@
-import './ItemListContainer.scss'
-import ItemList from '../itemList/itemList'
 import { useEffect, useState } from 'react'
 import { pedirDatos } from '../../helpers/pedirDatos'
 import { useParams } from 'react-router-dom'
 
 const ItemListContainer = () => {
 
-    const [ productos, setProductos ] = useState ([])
+    const [ item, setItem ] = useState ([null])
     const [ loading, setLoading] = useState (true)
 
 
-    const {categoryId} = useParams()
-        console.log(categoryId)
+    const {itemId} = useParams()
+        console.log(item)
+        console.log(itemId)
 
     useEffect (() => {
         setLoading(true)
 
         pedirDatos()
             .then((res) => {
-                if (!categoryId){
-                setProductos(res)
-                } else{
-                    setProductos(res.filter((item) => item.category === categoryId))
-                }
+                setItem(res.find((prod) => prod.id === Number(itemId)))
             })
             .catch((err) => console.log(err))
             .finally(() => setLoading(false))
-    }, [categoryId])
+    }, [itemId])
 
 
     return(
@@ -41,4 +36,4 @@ const ItemListContainer = () => {
     )
 }
 
-export default ItemListContainer
+export default ItemDetailContainer
