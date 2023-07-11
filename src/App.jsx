@@ -20,8 +20,8 @@ function App() {
           <Route path="/" element={<ItemListContainer />} />
           <Route path="/productos/:categoryId" element={<ItemListContainer/>} />
           <Route path="/detail/:itemId" element={<ItemDetailContainer/>} />
-          {/*<Route path="/nosotros" element={<Nosotros />} />*/}
-          {/*<Route path="/contacto" element={<Contacto/>} />*/}
+          <Route path="/nosotros" element={<Nosotros />} />
+          <Route path="/contacto" element={<Contacto/>} />
           <Route path="*" element={ <navigate to={"/"} />}></Route>
          {/* <Route path="*" element={<Error404/>} /> */} 
       </Routes>

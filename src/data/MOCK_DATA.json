@@ -5,7 +5,8 @@
         "descripcion": "Procesador de 3.6 Ghz",
         "precio": 47000,
         "img": "/public/r5.png",
-        "category": "ryzen"
+        "category": "ryzen",
+        "stock": 10
     },
     {
         "id": 2,
@@ -13,7 +14,8 @@
         "descripcion": "Procesador de 3.9 Ghz",
         "precio": 60000,
         "img": "/public/r7.png",
-        "category": "ryzen"
+        "category": "ryzen",
+        "stock": 10
     },
     {
         "id": 3,
@@ -21,7 +23,8 @@
         "descripcion": "Procesador de 4.1 Ghz",
         "precio": 100000,
         "img": "/public/r9.png",
-        "category": "ryzen"
+        "category": "ryzen",
+        "stock": 10
     },
     {
         "id": 4,
@@ -29,7 +32,8 @@
         "descripcion": "Procesador de 3.6 Ghz",
         "precio": 50000,
         "img": "/public/i5.png",
-        "category": "intel"
+        "category": "intel",
+        "stock": 10
     },
     {
         "id": 5,
@@ -37,7 +41,8 @@
         "descripcion": "Procesador de 3.9 Ghz",
         "precio": 80000,
         "img": "/public/i7.png",
-        "category": "intel"
+        "category": "intel",
+        "stock": 10
     },
     {
         "id": 6,
@@ -45,6 +50,7 @@
         "descripcion": "Procesador de 3.9 Ghz",
         "precio": 120000,
         "img": "/public/i9.png",
-        "category": "intel"
+        "category": "intel",
+        "stock": 10
     }
 ]
