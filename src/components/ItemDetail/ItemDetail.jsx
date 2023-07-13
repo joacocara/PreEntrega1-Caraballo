@@ -11,7 +11,7 @@ const ItemDetail = ({id, nombre, precio, category, descripcion, img, stock}) => 
 
     console.log( isInCart(id) )
 
-    const [cantidad, setCantidad] = useState(0)
+    const [cantidad, setCantidad] = useState(1)
     const navigate = useNavigate()
 
     const handleAgregar = () => {
@@ -39,6 +39,8 @@ const ItemDetail = ({id, nombre, precio, category, descripcion, img, stock}) => 
 
             <img src={img} alt={nombre} />
             <p>{descripcion}</p>
+            
+           
 
             <h4>Precio: ${precio}</h4>
             <br />
@@ -47,7 +49,7 @@ const ItemDetail = ({id, nombre, precio, category, descripcion, img, stock}) => 
 
             {
                 isInCart(id)
-                    ? <Link className="btn btn-success">Terminar mi compra</Link>
+                    ? <Link className="btn btn-success" to="/Cart">Terminar mi compra</Link>
                     : <ItemCount 
                     max={stock}
                     cantidad={cantidad}

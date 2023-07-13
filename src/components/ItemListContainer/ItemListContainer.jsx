@@ -34,12 +34,13 @@ const ItemListContainer = () => {
                 ? productos.filter(prod => prod.nombre.includes(search))
                 : productos
 
+
     return(
         <div className="container my-5">
             {
-                loading
-                    ? <h2>Cargando...</h2>
-                    : <ItemList items={listado} /> 
+              loading
+                ? <h2>Cargando...</h2>
+                : <ItemList items={listado} /> 
             }
          
         </div>

@@ -3,6 +3,7 @@ import logo from '../../assets/react.svg'
 import { Link } from 'react-router-dom'
 import React from 'react'
 import Buscador from '../Buscador/Buscador'
+import CartWidget from '../CartWidget/CartWidget'
 
 
 
@@ -18,6 +19,7 @@ const NavBar = ({variant = false}) => {
                     <Link className="navbar__link" to="/productos/intel">Intel</Link>
                     <Link className="navbar__link" to="/contacto">Contacto</Link>
                     <Link className="navbar__link" to="/nosotros">Nosotros</Link>
+                    <CartWidget />
                 </nav>
             </div>
         <br />

@@ -6,7 +6,7 @@
         "precio": 47000,
         "img": "/public/r5.png",
         "category": "ryzen",
-        "stock": 10
+        "stock": 9
     },
     {
         "id": 2,
@@ -15,7 +15,7 @@
         "precio": 60000,
         "img": "/public/r7.png",
         "category": "ryzen",
-        "stock": 10
+        "stock": 3
     },
     {
         "id": 3,
@@ -24,7 +24,7 @@
         "precio": 100000,
         "img": "/public/r9.png",
         "category": "ryzen",
-        "stock": 10
+        "stock": 2
     },
     {
         "id": 4,
@@ -33,7 +33,7 @@
         "precio": 50000,
         "img": "/public/i5.png",
         "category": "intel",
-        "stock": 10
+        "stock": 5
     },
     {
         "id": 5,
@@ -42,7 +42,7 @@
         "precio": 80000,
         "img": "/public/i7.png",
         "category": "intel",
-        "stock": 10
+        "stock": 8
     },
     {
         "id": 6,

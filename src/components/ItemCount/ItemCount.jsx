@@ -5,7 +5,7 @@ const ItemCount = ({ max, cantidad, setCantidad,handleAgregar  }) => {
         cantidad < max && setCantidad(cantidad + 1)
     }
     const handleRestar = () => {
-        cantidad > 0 && setCantidad(cantidad - 1)
+        cantidad > 1 && setCantidad(cantidad - 1)
     }
 
    
