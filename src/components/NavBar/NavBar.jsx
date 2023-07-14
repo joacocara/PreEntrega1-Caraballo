@@ -2,7 +2,6 @@ import './NavBar.scss'
 import logo from '../../assets/react.svg'
 import { Link } from 'react-router-dom'
 import React from 'react'
-import Buscador from '../Buscador/Buscador'
 import CartWidget from '../CartWidget/CartWidget'
 
 
@@ -23,7 +22,7 @@ const NavBar = ({variant = false}) => {
                 </nav>
             </div>
         <br />
-      <Buscador />
+      {/*<Buscador />*/}
     </nav>
     )
 }

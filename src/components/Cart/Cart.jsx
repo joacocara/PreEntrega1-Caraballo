@@ -1,7 +1,7 @@
 import { useContext } from "react"
-import { CartContext } from "../Context/CartContext"
 import { FaTrash } from "react-icons/fa"
 import { Link } from "react-router-dom"
+import { CartContext } from "../../Context/CartContext"
 
 
 

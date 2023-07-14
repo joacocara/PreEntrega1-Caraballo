@@ -5,8 +5,8 @@ import Nosotros from "./components/Nosotros/Nosotros"
 import { BrowserRouter, Routes, Route} from "react-router-dom"
 import Contacto from "./components/Contacto/Contacto"
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer"
-import { CartProvider } from "./components/Context/CartContext"
 import Cart from "./components/Cart/Cart"
+import { CartProvider } from "./Context/CartContext"
 
 
 
