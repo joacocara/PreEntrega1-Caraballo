@@ -1,53 +1,30 @@
-import './ItemListContainer.scss'
-import ItemList from '../itemList/itemList'
-import { useEffect, useState } from 'react'
-import { pedirDatos } from '../../helpers/pedirDatos'
+import './ItemListContainer.css'
+import ItemList from '../ItemList/ItemList'
+import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import { useSearchParams } from 'react-router-dom'
+
 
 const ItemListContainer = () => {
 
-    const [ productos, setProductos ] = useState ([])
-    const [ loading, setLoading] = useState (true)
-    const [searchParams] = useSearchParams()
+    const [productos, setProductos] = useState([])
+    const [loading, setLoading] = useState(true)
 
-    const search = searchParams.get("search")
+    const { categoryId } = useParams()
 
-    const {categoryId} = useParams()
-
-    useEffect (() => {
+    useEffect(() => {
         setLoading(true)
 
-        pedirDatos()
-            .then((res) => {
-                if (!categoryId){
-                    setProductos(res)
-                } else{
-                    setProductos( res.filter((item) => item.category === categoryId) )
-                }
-            })
-            .catch((err) => console.log(err))
-            .finally(() => setLoading(false))
+       
     }, [categoryId])
 
-    const listado = search
-                ? productos.filter(prod => prod.nombre.includes(search))
-                : productos
-
-
-
-    
-     
-
-    return(
+                        
+    return (
         <div className="container my-5">
-           {
+            {
                 loading
                     ? <h2>Cargando...</h2>
-                    : <ItemList items={listado} />
-            }  
-           {/*   {loading && <h2>Cargando</h2>}
-             {!loading && <ItemList items={listado}/>}  */}
+                    : <ItemList items={productos}/>
+            }
         </div>
     )
 }

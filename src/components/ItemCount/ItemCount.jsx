@@ -1,5 +1,5 @@
 
-const ItemCount = ({ max, cantidad, setCantidad,handleAgregar  }) => {
+const ItemCount = ({ max, cantidad, setCantidad, handleAgregar  }) => {
 
     const handleSumar = () => {
         cantidad < max && setCantidad(cantidad + 1)
@@ -8,6 +8,7 @@ const ItemCount = ({ max, cantidad, setCantidad,handleAgregar  }) => {
         cantidad > 1 && setCantidad(cantidad - 1)
     }
 
+   
    
     return (
         <div>  

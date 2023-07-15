@@ -6,6 +6,8 @@ import CartWidget from '../CartWidget/CartWidget'
 import { CartContext } from '../../Context/CartContext'
 import Buscador from '../../ejemplos/Buscador/Buscador'
 
+const NavBar = ({ variant = false }) => {
+  const { cart } = useContext(CartContext)
 
 
 const NavBar = ({variant = false}) => {
@@ -30,7 +32,7 @@ const NavBar = ({variant = false}) => {
       <Buscador />  
       {/*Este commit funciona bien, seguir con firebase */}
     </nav>
-    )
-}
+  )
+}}
 
 export default NavBar
