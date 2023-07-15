@@ -1,7 +1,8 @@
 import { useState, useContext } from "react"
 import ItemCount from "../ItemCount/ItemCount"
 import { Link, useNavigate } from "react-router-dom"
-import { CartContext } from "../Context/CartContext"
+import { CartContext } from "../../Context/CartContext"
+
 
 
 
@@ -37,8 +38,6 @@ const ItemDetail = ({id, nombre, precio, category, descripcion, img, stock}) => 
 
             <img src={img} alt={nombre} />
             <p>{descripcion}</p>
-            
-           
 
             <h4>Precio: ${precio}</h4>
             <br />
@@ -47,12 +46,12 @@ const ItemDetail = ({id, nombre, precio, category, descripcion, img, stock}) => 
 
             {
                 isInCart(id)
-                    ? <Link className="btn btn-success" to="/Cart">Terminar mi compra</Link>
-                    : <ItemCount 
-                    max={stock}
-                    cantidad={cantidad}
-                    setCantidad={setCantidad}
-                    handleAgregar={handleAgregar}
+                    ?   <Link className="btn btn-success" to="/Cart">Terminar mi compra</Link>
+                    :   <ItemCount 
+                            max={stock}
+                            cantidad={cantidad}
+                            setCantidad={setCantidad}
+                            handleAgregar={handleAgregar}
                 />
             }
             <hr />

@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import ItemDetail from '../ItemDetail/ItemDetail'
-import { doc, getDoc } from 'firebase/firestore'
-import { db } from '../../firebase/config'
+
 
 const ItemDetailContainer = () => {
 
@@ -14,19 +13,9 @@ const ItemDetailContainer = () => {
     useEffect (() => {
         setLoading(true)
 
-        // 1) armar la referencia
-        const itemRef = doc(db, "productos", itemId)
-        // 2) solicitar el doc
-        getDoc(itemRef)
-            .then((doc) => {
-                console.log(doc.id)
-                console.log(doc.data())
-
-                setItem({
-                    ...doc.data(),
-                    id: doc.id
-                })
-            })
+       
+               
+            
             .catch(e => console.log(e))
             .finally(() => setLoading(false))
     }, [itemId])
