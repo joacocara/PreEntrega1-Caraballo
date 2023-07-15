@@ -27,7 +27,6 @@ function App() {
               <Route path="/contacto" element={<Contacto/>} />
               <Route path="/cart" element={<Cart/>} />
               <Route path="*" element={ <navigate to={"/"} />}></Route>
-              {/* <Route path="*" element={<Error404/>} /> */} 
           </Routes>
 
           <footer />
