@@ -28,7 +28,7 @@ const NavBar = ({variant = false}) => {
             </div>
         <br />
       <Buscador />  
-      {/*Este commit funciona bien, seguir con firebase*/}
+      {/*Este commit funciona bien, seguir con firebase */}
     </nav>
     )
 }
