@@ -1,12 +1,15 @@
 import './NavBar.scss'
 import logo from '../../assets/react.svg'
 import { Link } from 'react-router-dom'
-import React from 'react'
+import { useContext } from 'react'
 import CartWidget from '../CartWidget/CartWidget'
+import { CartContext } from '../../Context/CartContext'
+import Buscador from '../../ejemplos/Buscador/Buscador'
 
 
 
 const NavBar = ({variant = false}) => {
+    const { cart } = useContext (CartContext)
   
     return (
         <nav className={variant ? "navbar navbar-v" : "navbar"}>
@@ -18,11 +21,13 @@ const NavBar = ({variant = false}) => {
                     <Link className="navbar__link" to="/productos/intel">Intel</Link>
                     <Link className="navbar__link" to="/contacto">Contacto</Link>
                     <Link className="navbar__link" to="/nosotros">Nosotros</Link>
-                    <CartWidget />
                 </nav>
+                <div> 
+                    {cart.length > 0 && <CartWidget /> }
+                </div>
             </div>
         <br />
-      {/*<Buscador />*/}
+      <Buscador />
     </nav>
     )
 }

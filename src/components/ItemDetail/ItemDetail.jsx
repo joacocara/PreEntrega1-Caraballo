@@ -10,8 +10,6 @@ const ItemDetail = ({id, nombre, precio, category, descripcion, img, stock}) => 
 
     const { agregarCarrito, isInCart } = useContext(CartContext)
 
-    console.log( isInCart(id) )
-
     const [cantidad, setCantidad] = useState(1)
     const navigate = useNavigate()
 
@@ -40,8 +38,6 @@ const ItemDetail = ({id, nombre, precio, category, descripcion, img, stock}) => 
 
             <img src={img} alt={nombre} />
             <p>{descripcion}</p>
-            
-           
 
             <h4>Precio: ${precio}</h4>
             <br />
@@ -50,12 +46,12 @@ const ItemDetail = ({id, nombre, precio, category, descripcion, img, stock}) => 
 
             {
                 isInCart(id)
-                    ? <Link className="btn btn-success" to="/Cart">Terminar mi compra</Link>
-                    : <ItemCount 
-                    max={stock}
-                    cantidad={cantidad}
-                    setCantidad={setCantidad}
-                    handleAgregar={handleAgregar}
+                    ?   <Link className="btn btn-success" to="/Cart">Terminar mi compra</Link>
+                    :   <ItemCount 
+                            max={stock}
+                            cantidad={cantidad}
+                            setCantidad={setCantidad}
+                            handleAgregar={handleAgregar}
                 />
             }
             <hr />

@@ -35,14 +35,19 @@ const ItemListContainer = () => {
                 : productos
 
 
+
+    
+     
+
     return(
         <div className="container my-5">
-            {
-              loading
-                ? <h2>Cargando...</h2>
-                : <ItemList items={listado} /> 
-            }
-         
+           {
+                loading
+                    ? <h2>Cargando...</h2>
+                    : <ItemList items={listado} />
+            }  
+           {/*   {loading && <h2>Cargando</h2>}
+             {!loading && <ItemList items={listado}/>}  */}
         </div>
     )
 }
